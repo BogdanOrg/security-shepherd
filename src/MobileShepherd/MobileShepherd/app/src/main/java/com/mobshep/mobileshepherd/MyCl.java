@@ -1,10 +1,9 @@
-package utils;
+package MobileShepherd.app.src.main.java.com.mobshep.mobileshepherd;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
-public class Tmp extends MainActivity
+public class MyCl extends MainActivity
         implements OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     TabHost th;
