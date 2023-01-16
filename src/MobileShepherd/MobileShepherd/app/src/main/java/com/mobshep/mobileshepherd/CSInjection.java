@@ -112,6 +112,7 @@ public class CSInjection extends MainActivity
     th = (TabHost) findViewById(R.id.tabhost);
   }
 
+  // add comment
   public void onClick(View arg0) {
     switch (arg0.getId()) {
       case (R.id.bLogin):
@@ -247,6 +248,7 @@ public class CSInjection extends MainActivity
     }
   }
 
+  // comment is added
   public void generateKey(Context context, String password) {
     try {
       try {
