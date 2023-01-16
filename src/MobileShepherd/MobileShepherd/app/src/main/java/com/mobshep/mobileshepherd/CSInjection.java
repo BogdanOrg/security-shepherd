@@ -204,6 +204,12 @@ public class CSInjection extends MainActivity
 
         SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(dbPath, dbPass, null);
 
+        db.execSQL("DROP TABLE IF EXISTS encrypted");
+        db.execSQL(
+            "CREATE TABLE encrypted(memID INTEGER PRIMARY KEY AUTOINCREMENT, memName TEXT, memAge"
+                + " INTEGER, memPass VARCHAR)");
+
+        db.execSQL("INSERT INTO encrypted VALUES( 1,'Admin',20,'A3B922DF010PQSI827')");
 
       } catch (Exception e) {
         // TODO Auto-generated catch block
