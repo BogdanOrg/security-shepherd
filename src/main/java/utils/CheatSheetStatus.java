@@ -44,6 +44,8 @@ public class CheatSheetStatus {
     saveCheatStatus();
   }
 
+  // add some comment here
+  // one more line
   public static void enableForAdminsOnly() {
     if (!isLoaded) {
       loadCheatStatus();

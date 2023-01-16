@@ -247,35 +247,4 @@ public class CSInjection extends MainActivity
     }
   }
 
-  public void generateKey(Context context, String password) {
-    try {
-      try {
-        SQLiteDatabase.loadLibs(context);
-
-        String dbPath = context.getDatabasePath("key0.db").getPath();
-
-        File dbPathFile = new File(dbPath);
-        if (!dbPathFile.exists()) {
-          dbPathFile.getParentFile().mkdirs();
-        }
-
-        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(dbPath, dbPass, null);
-
-        db.execSQL("DROP TABLE IF EXISTS key0");
-        db.execSQL("CREATE TABLE key0(key VARCHAR)");
-
-        db.execSQL("INSERT INTO key0 VALUES('The Key is VolcanicEruptionsAbruptInterruptions.')");
-
-      } catch (Exception e) {
-        // TODO Auto-generated catch block
-        Toast error = Toast.makeText(CSInjection.this, "An error occurred.", Toast.LENGTH_LONG);
-        error.show();
-      }
-
-    } catch (SQLiteException e) {
-      Toast error =
-          Toast.makeText(CSInjection.this, "An database error occurred.", Toast.LENGTH_LONG);
-      error.show();
-    }
-  }
 }
